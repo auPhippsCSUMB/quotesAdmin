@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/header.ejs") %>
+
+    <body>
+        <%- include("partials/nav.ejs") %>
+            <h1> Welcome <%=fullName%>!</h1>
+
+            <% if (admin) { %>
+                <div class="mainHome">
+                    <h2>Add Authors Below!</h2>
+                    <form action="/addAuthor">
+                        <button class="homeButton"> Add Authors </button>
+                    </form>
+                </div>
+                <br>
+                <div class="mainHome">
+                    <h2>Add Quotes Below!</h2>
+                    <form action="/addQuote">
+                        <button class="homeButton"> Add Quotes </button>
+                    </form>
+                </div>
+                <br>
+                <div class="mainHome">
+                    <h2>View All Authors Below!</h2>
+                    <form action="/authors">
+                        <button class="homeButton"> All Authors </button>
+                    </form>
+                </div>
+                <br>
+                <div class="mainHome">
+                    <h2>View All Quotes Below!</h2>
+                    <form action="/quotes">
+                        <button class="homeButton"> All Quotes </button>
+                    </form>
+                </div>
+                <% } else { %>
+                    <div class="mainHome">
+                        <h2>View All Authors Below!</h2>
+                        <form action="/authors">
+                            <button class="homeButton"> All Authors </button>
+                        </form>
+                    </div>
+
+                    <br>
+
+                    <div class="mainHome">
+                        <h2>View All Quotes Below!</h2>
+                        <form action="/quotes">
+                            <button class="homeButton"> All Quotes </button>
+                        </form>
+                    </div>
+                    <% } %>
+    </body>
+    <%- include("partials/footer.ejs") %>
+
+</html>

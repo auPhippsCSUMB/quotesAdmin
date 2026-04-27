@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+.lexend-norm {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+html {
+    position: relative;
+    font-family: 'Lexend', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(188, 255, 229) 100%);
+    height: fit-content;
+    min-height: 98vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* .card {
+    width: fit-content;
+    height: fit-content;
+    padding: 1vw;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin: auto;
+} */
+
+button {
+    background-color: aliceblue;
+    padding: 0.3vw;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    box-shadow: 0.1rem 0.1rem 5px rgba(0, 0, 0, 0.4);
+    scale: 105%;
+}
+
+.homeButton {
+    font-size: 1vw;
+    justify-content: center;
+}
+
+.main {
+    width: 60vw;
+    height: fit-content;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+.mainAuthor {
+    width: 30vw;
+    height: fit-content;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+.mainHome {
+    width: 30vw;
+    height: fit-content;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.mainForm {
+    width: 25vw;
+    height: fit-content;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 2vh;
+    text-align: left;
+    font-size: 1.2vw;
+}
+
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 80vw;
+    margin: 1.5vh auto;
+    font-size: 1.5vw;
+    padding: 1%;
+    display: flex;
+    border-radius: 30px;
+}
+
+.navLink {
+    margin: 0.5vw;
+    transition: all 0.2s ease;
+}
+
+.navLink:hover {
+    scale: 105%;
+    color: grey;
+}
+
+.right {
+    margin-left: auto;
+    color: red;
+}
+
+.update {
+    text-decoration: underline;
+}

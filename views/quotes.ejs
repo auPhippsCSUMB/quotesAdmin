@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/header.ejs") %>
+
+    <body>
+        <%- include("partials/nav.ejs") %>
+            <h1>All Quotes</h1>
+            <% if (admin) { %>
+                <% for (let i of quotes) { %>
+                    <div class="main">
+                        <h3>
+                            <%= i.quoteId%>: <%= i.quote%>
+                        </h3>
+                        <button><a href="/updateQuote?quoteId=<%= i.quoteId%>">Update </a></button>
+                        <button><a href="/deleteQuote?quoteId=<%= i.quoteId%>">Delete </a></button>
+                    </div>
+                    <% } %>
+                        <% } else { %>
+                            <% for (let i of quotes) { %>
+                                <div class="main">
+                                    <h3>
+                                        <%= i.quoteId%>: <%= i.quote%>
+                                    </h3>
+                                </div>
+                                <% } %>
+                                    <% } %>
+    </body>
+    <%- include("partials/footer.ejs") %>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/header.ejs") %>
+
+    <body>
+        <%- include("partials/nav.ejs") %>
+            <h1>All Authors</h1>
+            <% if (admin) { %>
+                <% for (let i of authors) { %>
+                    <div class="mainAuthor">
+                        <h3>
+                            <%= i.firstName%>
+                                <%= i.lastName%>
+                        </h3>
+                        <button><a href="/updateAuthor?authorId=<%= i.authorId%>">Update Author</a></button>
+                        <button><a href="/deleteAuthor?authorId=<%= i.authorId%>">Delete Author</a></button>
+                    </div>
+                    <% } %>
+                        <% } else { %>
+                            <% for (let i of authors) { %>
+                                <div class="mainAuthor">
+                                    <h3>
+                                        <%= i.firstName%>
+                                            <%= i.lastName%>
+                                    </h3>
+                                </div>
+                                <% } %>
+                                    <% } %>
+    </body>
+    <%- include("partials/footer.ejs") %>
+
+</html>
