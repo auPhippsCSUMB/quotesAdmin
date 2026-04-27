@@ -4,22 +4,22 @@
 
     <body>
         <%- include("partials/nav.ejs") %>
-        <div class="main">
             <h1>Adding a new Author</h1>
 
-            <form method="POST" action="/addAuthor">
-                First Name: <input type="text" name="firstName"><br>
-                Last Name: <input type="text" name="lastName"><br>
-                Date of Birth: <input type="date" name="dob"><br>
-                Date of Death: <input type="date" name="dod"><br>
-                Sex: M<input type="radio" name="sex" value="M"> F<input type="radio" name="sex" value="F"><br>
-                Profession: <input type="text" name="profession"><br>
-                Country: <input type="text" name="country"><br>
-                Biography: <textarea name="bio"></textarea><br>
-                Image URL: <textarea name="imgUrl"></textarea><br>
-                <button> Add Author!</button>
-            </form>
-        </div>
+            <div class="mainForm">
+                <form method="POST" action="/addAuthor">
+                    First Name: <input type="text" name="firstName"><br>
+                    Last Name: <input type="text" name="lastName"><br>
+                    Date of Birth: <input type="date" name="dob"><br>
+                    Date of Death: <input type="date" name="dod"><br>
+                    Sex: M<input type="radio" name="sex" value="M"> F<input type="radio" name="sex" value="F"><br>
+                    Profession: <input type="text" name="profession"><br>
+                    Country: <input type="text" name="country"><br>
+                    Biography: <textarea name="bio"></textarea><br>
+                    Image URL: <textarea name="imgUrl"></textarea><br>
+                    <button> Add Author!</button>
+                </form>
+            </div>
     </body>
     <%- include("partials/footer.ejs") %>
 

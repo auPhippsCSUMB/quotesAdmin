@@ -41,11 +41,11 @@ app.use((req, res, next) => {
 
 
 //routes
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
     res.render('login.ejs')
 });
 
-app.get('/home', isUserAuthenticated, (req, res) => {
+app.get('/home', isUserAuthenticated, async (req, res) => {
     res.render('home.ejs')
 });
 
@@ -97,7 +97,7 @@ app.post('/loginProcess', async (req, res) => {
 });
 
 
-app.get('/addAuthor', isUserAuthenticated, isUserAdmin, (req, res) => {
+app.get('/addAuthor', isUserAuthenticated, isUserAdmin, async (req, res) => {
     res.render('addAuthor.ejs')
 });
 
